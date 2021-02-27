@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pendulum Swing Analyzer</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet">
+    </link>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="{{ url_for('index') }}" class="nav-item">Home</a>
+                <a href="#bannerformmodal" data-toggle="modal" data-target="#exampleModal">Login</a>
+                <a href="{{ url_for('logout') }}" class="nav-item">Logout</a>
+            </nav>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <form action='login' method='POST'>
+                            <div class="modal-body">
+                                <input type='text' name='email' id='email' placeholder='email' class="form-control" />
+                                <input type='password' name='password' id='password' placeholder='password'
+                                    class="form-control" />
+                            </div>
+
+                            <div class="modal-footer">
+                                <input type='submit' name='submit' class="form-control btn btn-primary mb-2" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- UI DIALOG -->
+    <div class="modal fade" id="ui_dialog_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Response</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body container" id="result_container">
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" id="close_modal">Close this</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start content-->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- End of Content -->
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container text-center">
+            Murat Ambarkutuk | VAST Lab, Mechanical Engineering Department, Virginia Tech, Blacksburg, VA
+        </div>
+    </footer>
+</body>
+
+</html>

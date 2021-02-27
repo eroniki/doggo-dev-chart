@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container form-group">
+    <h1>Welcome to Pendulum Swing Analyzer!</h1>
+    <br>
+    <form action='login' method='POST'>
+        <input type='text' name='email' id='email' placeholder='email' class="form-control" />
+        <input type='password' name='password' id='password' placeholder='password' class="form-control" />
+        <input type='submit' name='submit' class="form-control btn btn-primary mb-2" />
+    </form>
+</div>
+{% endblock %}

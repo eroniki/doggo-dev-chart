@@ -17,7 +17,7 @@ from utils import utils
 class flask_app(object):
     """docstring for flask_app."""
 
-    def __init__(self, key, settings):
+    def __init__(self, key="doggo-dev-chart", settings="settings.json"):
         super(flask_app, self).__init__()
         self.app = Flask(__name__)
         self.um = utils.misc()

@@ -1,2 +1,7 @@
 numpy==1.16.4
 Flask==1.1.2
+scipy==blork
+matplotlib==blork
+pandas==blork
+sympy==blork
+nose==blork

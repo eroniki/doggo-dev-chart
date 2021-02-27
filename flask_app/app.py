@@ -98,14 +98,6 @@ class flask_app(object):
     def unauthorized_handler(self):
         return flask.redirect("/login")
 
-    def log(self):
-        lines = tailer.tail(open('logs/status.log'), 10)
-
-        statement = ""
-
-        for line in lines:
-            statement += (line + "<br />")
-        return statement
 class User(flask_login.UserMixin):
     # TODO: Implement this
     pass

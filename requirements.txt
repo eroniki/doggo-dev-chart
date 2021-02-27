@@ -1,7 +1,4 @@
 numpy==1.16.4
 Flask==1.1.2
-scipy==blork
-matplotlib==blork
-pandas==blork
-sympy==blork
-nose==blork
+scipy==1.6.1
+matplotlib==3.3.4

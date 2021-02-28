@@ -1,6 +1,8 @@
 from flask_app.app import flask_app
 
-if __name__ == "__main__":
+def main(x=0, y=0):
     fa = flask_app("doggo-dev-chart", settings="settings.json")
     fa.app.run(host="0.0.0.0", port=5000)
-    pass
+
+if __name__ == "__main__":
+    main()
